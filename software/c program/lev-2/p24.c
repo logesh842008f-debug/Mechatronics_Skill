@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int num,n=1,digit,rev,sum=0,temp;
+    scanf("%d",&num);
+    if(num>0)
+    {
+        while(n<=num)
+        {
+        temp=n;
+        rev=0;
+        while(temp!=0)
+        {
+            digit=temp%10;
+            rev=rev*10+digit;
+            temp/=10;
+        }
+        if(rev==n)
+        {
+           sum+=rev;
+        }
+        n++;
+    }
+    printf("%d",sum);
+    }
+    else{
+        printf("Invalid");
+    }
+}
